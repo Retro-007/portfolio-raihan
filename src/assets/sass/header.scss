@@ -1,0 +1,221 @@
+@import "variables";
+:root {
+  --header-bg-color: #212428; // Define the CSS variable at the root level
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  background-color: var(--header-bg-color);
+  transition: background-color 0.3s ease;
+  z-index: 1000;
+
+  &.scrolled {
+    --header-bg-color: rgba(33, 36, 40, 0.8705882353);
+    box-shadow: 10px 10px 19px #1c1e22, -10px -10px 19px #262a2e;
+    backdrop-filter: blur(15px);
+    top: 0;
+  }
+  .py-5-5 {
+    padding-top: 2.8rem;
+    padding-bottom: 2.8rem;
+  }
+
+  .header-font-right {
+    font-size: large;
+  }
+
+  .nav {
+    .nav-item {
+      transition: color 0.3s, opacity 0.3s; /* Add smooth color and opacity transitions */
+
+      color: $font-color-nav; /* Inactive items should be gray */
+
+      &.active {
+        opacity: 1;
+        color: white; /* Active item should be white */
+      }
+
+      &:hover {
+        opacity: 1;
+        color: white; /* Hovered item should be white */
+
+        /* Style the inactive items when any item is hovered */
+        ~ .nav-item:not(.active):not(:hover) {
+          opacity: 0.5; /* Inactive items should have reduced opacity */
+          color: $font-color-nav; /* Inactive items should be gray */
+        }
+      }
+      // &:not(:hover):not(.active) {
+      //   opacity: 0.5;
+      //   color: $font-color-nav; /* Inactive items should be gray */
+      // }
+    }
+
+    button.contact-btn {
+      display: inline-block;
+      padding: 15px 35px;
+      list-style: none;
+      text-decoration: none;
+      color: #ff014f;
+    }
+
+    button {
+      &.contact-btn {
+        border-radius: 6px;
+        background: linear-gradient(145deg, #1e2024, #23272b);
+        box-shadow: 10px 10px 19px #1c1e22, -10px -10px 19px #262a2e;
+        transition: 0.4s;
+        position: relative;
+        z-index: 2;
+        font-size: 14px;
+        font-weight: 400;
+        border: 0 none;
+
+        &::before {
+          content: "";
+          position: absolute;
+          transition: 0.4s;
+          width: 100%;
+          height: 100%;
+          border-radius: 6px;
+          top: 0;
+          left: 0;
+          background: linear-gradient(to right bottom, #212428, #16181c);
+          opacity: 0;
+          z-index: -1;
+        }
+
+        &:hover {
+          transform: translateY(-5px);
+
+          &::before {
+            opacity: 1;
+          }
+        }
+
+        &.no-shadow {
+          box-shadow: none;
+        }
+
+        &.btn-theme {
+          background: #ff014f !important;
+          color: white !important;
+          &::before {
+            display: none;
+          }
+          &:hover {
+          }
+        }
+
+        &.btn-transparent {
+          background: transparent;
+          &::before {
+            display: none;
+          }
+        }
+
+        &.thumbs-icon {
+          svg {
+            margin-top: -7px;
+          }
+        }
+      }
+    }
+    span {
+      color: #ff014f;
+      font-weight: 400 !important;
+    }
+  }
+  // .nav {
+  //   .nav-item {
+  //     transition: color 0.3s, opacity 0.3s; /* Add smooth color and opacity transitions */
+  //     color: $font-color-nav;
+
+  //     &.active,
+  //     &:hover {
+  //       opacity: 1;
+  //       color: white; /* Active and hovered items should be white */
+  //     }
+
+  //     &:not(:hover):not(.active) {
+  //       /* Style the inactive items when any item is not hovered */
+  //       opacity: 0.5;
+  //       color: $font-color-nav;
+  //     }
+  //   }
+  // }
+
+  /* Overlay styles */
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    animation: fadeIn 0.3s ease-out forwards;
+
+    .overlay-content-head {
+      opacity: 0;
+      animation: slideInAndFade 0.3s ease-out forwards;
+    }
+    a {
+      text-decoration: none;
+      color: white;
+    }
+    p {
+      color: white;
+      font-size: 15px;
+    }
+    span {
+      color: white;
+      font-size: 20px;
+    }
+
+    .nav-link {
+      &.active {
+        color: $background-color;
+      }
+    }
+  }
+  .exit-animation {
+    opacity: 0;
+    animation: fadeOut 0.3s ease-out forwards;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideInAndFade {
+  0% {
+    height: 0%;
+    opacity: 0;
+  }
+  100% {
+    height: 100%; /* Slide in from top by increasing the height */
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
