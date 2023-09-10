@@ -1,0 +1,8 @@
+export const INDEX = "/"
+export const ABOUTME = "/about"
+export const PROFILE = "/profile"
+export const WHAT_I_DO = "/what-i-do"
+export const RESUME = "/resume"
+export const PORTFOLIO = "/portfolio"
+export const CLIENT_SPEAK = "/client-speak"
+export const CONTACT_ME = "/contact-me"
