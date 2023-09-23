@@ -10,11 +10,11 @@ const Navbar = () => {
 
     return (
         <React.Fragment>
-            <nav className="mx-auto flex max-w-full	 items-center justify-between py-5 lg:px-5" aria-label="Global">
+            <nav className="flex items-center justify-between w-full max-w-full px-2 py-5 mx-auto md:px-5 lg:px-5" aria-label="Global">
                 <div className="flex lg:flex-1">
-                    <Link to={INDEX} className="flex items-center">
-                        <img className="h-16 rounded-full border-4 border-slate-600" src={avatar} alt={"Muhammed Raihan"} />
-                        <span className="ms-2 text-portfolio-gray font-semibold text-xl">Muhammed Raihan</span>
+                    <Link to={INDEX} className="flex items-center justify-center">
+                        <img className="h-16 border-4 rounded-full border-slate-600" src={avatar} alt={"Muhammed Raihan"} />
+                        <span className="font-semibold ms-2 text-portfolio-gray md:text-xl">Muhammed Raihan</span>
                     </Link>
                 </div>
                 <div className="flex lg:hidden">
@@ -24,10 +24,10 @@ const Navbar = () => {
                     // onClick={() => setMobileMenuOpen(true)}
                     >
                         <span className="sr-only">Open main menu</span>
-                        <Bars3Icon className="h-6 w-6" aria-hidden="true" />
+                        <Bars3Icon className="w-6 h-6" aria-hidden="true" />
                     </button>
                 </div>
-                <Popover.Group className=" nav hidden lg:flex items-center lg:gap-x-8">
+                <Popover.Group className="items-center hidden nav lg:flex lg:gap-x-8">
                     <Link to={INDEX} className={` nav-item text-sm uppercase  leading-6 text-color-gray ${pathname == INDEX && ("current")}`}>
                         Home
                     </Link>
@@ -45,7 +45,7 @@ const Navbar = () => {
                         Portfolio
                     </Link>
 
-                    <button className='contact-btn  '>
+                    <button className='contact-btn '>
                         <span>
                             Hire Me
                         </span>
