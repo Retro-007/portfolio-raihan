@@ -3,35 +3,35 @@ import React from 'react'
 const Bio = () => {
     return (
         <React.Fragment>
-            <div className='card-bio max-w-39 p-9 rounded-tr-xl rounded-tl-xl'>
-                <div className='flex flex-col justify-normal gap-3 items-start'>
+            <div className='card-bio p-9 rounded-tr-xl rounded-tl-xl'>
+                <div className='flex flex-col items-start gap-3 justify-normal'>
                     <div className='user '>
-                        <div className='flex flex-row p0-3 justify-center items-center'>
+                        <div className='flex flex-row items-center justify-center '>
                             <i className='pi pi-user'></i>
                         </div>
                     </div>
                     <div>
-                        <span className='text-white font-bold text-6xl'>Hi, I'm </span>
-                        <span className='font-primary-text font-bold text-6xl'>Muhd Raihan</span>
+                        <span className='text-xl font-bold text-white md:text-4xl lg:text-6xl'>Hi, I'm </span>
+                        <span className='text-xl font-bold font-primary-text md:text-4xl lg:text-6xl'>Muhd Raihan</span>
                     </div>
                     <div>
-                        <span className='text-portfolio-gray'>Full Stack Developer | Freelancer |  Team Lead Developer | ReactJs | Typescript | Laravel </span>
+                        <span className='text-xs text-portfolio-gray md:text-xl'>Full Stack Developer | Freelancer |  Team Lead Developer | ReactJs | Typescript | Laravel </span>
                     </div>
-                    <div className='flex gap-2 items-center'>
-                        <i className='pi pi-envelope text-lg font-primary-text'></i>
-                        <span className='text-portfolio-gray text-lg '>kadakkadanraihan@gmail.com</span>
+                    <div className='flex items-center gap-2'>
+                        <i className='text-xs md:text-lg pi pi-envelope font-primary-text'></i>
+                        <span className='text-xs md:text-lg text-portfolio-gray'>kadakkadanraihan@gmail.com</span>
                     </div>
-                    <div className='flex gap-2 items-center'>
-                        <i className='pi pi-phone text-lg font-primary-text'></i>
-                        <span className='text-portfolio-gray text-lg '>+91 9562492181</span>
+                    <div className='flex items-center gap-2'>
+                        <i className='text-xs md:text-lg pi pi-phone font-primary-text'></i>
+                        <span className='text-xs md:text-lg text-portfolio-gray '>+91 9562492181</span>
                     </div>
-                    <div className='flex gap-2 items-center'>
-                        <i className='pi pi-phone text-lg font-primary-text'></i>
-                        <span className='text-portfolio-gray text-lg '>+91 7012981211</span>
+                    <div className='flex items-center gap-2'>
+                        <i className='text-xs md:text-lg pi pi-phone font-primary-text'></i>
+                        <span className='text-xs md:text-lg text-portfolio-gray '>+91 7012981211</span>
                     </div>
-                    <div className='flex gap-2 items-center'>
-                        <i className='pi pi-map-marker text-lg font-primary-text'></i>
-                        <span className='text-portfolio-gray text-lg '>Malappuram, Kerala, India</span>
+                    <div className='flex items-center gap-2'>
+                        <i className='text-xs md:text-lg pi pi-map-marker font-primary-text'></i>
+                        <span className='text-xs md:text-lg text-portfolio-gray '>Malappuram, Kerala, India</span>
                     </div>
                 </div>
             </div>

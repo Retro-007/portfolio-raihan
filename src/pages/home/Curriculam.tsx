@@ -21,12 +21,12 @@ const Curriculam = () => {
 
     return (
         <React.Fragment>
-            <div className='card-bio max-w-39 p-9 rounded-b-lg '>
+            <div className='rounded-b-lg card-bio p-9 '>
                 <div className='flex flex-col gap-5'>
-                    <span>Download my curriculam vitae</span>
-                    <div className='flex flex-row gap-5 curriculam'>
-                        <button onClick={handleDownloadClick} className='curriculam-btn  '>Download CV</button>
-                        <button className='curriculam-btn  '>Contact Me</button>
+                    <span className='text-xs md:text-lg'>Download my curriculam vitae</span>
+                    <div className='flex flex-col gap-5 md:flex-row md:gap-5 curriculam'>
+                        <button onClick={handleDownloadClick} className='text-xs curriculam-btn md:text-lg'>Download CV</button>
+                        <button className='text-xs curriculam-btn md:text-lg'>Contact Me</button>
                     </div>
                 </div>
             </div>
