@@ -21,7 +21,7 @@ const Curriculam = () => {
 
     return (
         <React.Fragment>
-            <div className='rounded-b-lg card-bio max-w-39 p-9 '>
+            <div className='rounded-b-lg card-bio p-9 '>
                 <div className='flex flex-col gap-5'>
                     <span className='text-xs md:text-lg'>Download my curriculam vitae</span>
                     <div className='flex flex-col gap-5 md:flex-row md:gap-5 curriculam'>

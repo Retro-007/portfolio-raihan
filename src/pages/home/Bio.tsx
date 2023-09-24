@@ -3,16 +3,16 @@ import React from 'react'
 const Bio = () => {
     return (
         <React.Fragment>
-            <div className='card-bio max-w-39 p-9 rounded-tr-xl rounded-tl-xl'>
+            <div className='card-bio p-9 rounded-tr-xl rounded-tl-xl'>
                 <div className='flex flex-col items-start gap-3 justify-normal'>
                     <div className='user '>
-                        <div className='flex flex-row items-center justify-center p0-3'>
+                        <div className='flex flex-row items-center justify-center '>
                             <i className='pi pi-user'></i>
                         </div>
                     </div>
                     <div>
-                        <span className='text-xl font-bold text-white md:text-6xl'>Hi, I'm </span>
-                        <span className='text-xl font-bold font-primary-text md:text-6xl'>Muhd Raihan</span>
+                        <span className='text-xl font-bold text-white md:text-4xl lg:text-6xl'>Hi, I'm </span>
+                        <span className='text-xl font-bold font-primary-text md:text-4xl lg:text-6xl'>Muhd Raihan</span>
                     </div>
                     <div>
                         <span className='text-xs text-portfolio-gray md:text-xl'>Full Stack Developer | Freelancer |  Team Lead Developer | ReactJs | Typescript | Laravel </span>
